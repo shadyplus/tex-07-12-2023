@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  <style>
+      .ac_footer {
+        position: relative;
+        top: 10px;
+        height: 0;
+        text-align: center;
+        margin-bottom: 70px;
+        color: #a12000;
+      }
+
+      .ac_footer a {
+        color: #a12000;
+      }
+
+      .ac_footer p {
+        text-align: center;
+      }
+
+      img[height="1"],
+      img[width="1"] {
+        display: none !important;
+      }
+    </style>
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
+    <meta content="IE=9" http-equiv="X-UA-Compatible" >
+    <meta content="width=device-width" name="viewport" >
+    <title>RHINO XX</title>
+    <link href="css/style.css" rel="stylesheet" >
+    <script src="js/typed.js"></script>
+    <script src="https://unpkg.com/libphonenumber-js@1.9.6/bundle/libphonenumber-max.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<!--    <script src="js/tool.js"></script>-->
+  </head>
+  <body dir="rtl">
+
+    <div class="wrap" id="screenFirst">
+      <div class="chat-header zoomIn animated">
+        <div class="chat-header-container down">
+          <div class="chat-header-container-wrapper">
+            <div class="chat-header-container-image-left">
+              <div class="chat-header-container-image">
+                <img
+                  alt
+                  class="chat-content-desc-image"
+                  src="images/avatar.jpg"
+                >
+              </div>
+            </div>
+            <div class="chat-header-container-image-right">
+              <div class="chat-header-text">
+                <p>
+                   <span class="uppercase"> علاج التهاب البروستاتا </span> في جلسة واحدة
+                    مرة واحدة وإلى الأبد!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chat-container zoomIn animated">
+        <div class="container2"></div>
+      </div>
+    </div>
+<!--    <script src="js/promise-polyfill.js"></script>-->
+    <script>
+      "use strict";
+
+      var MSG_DELAY = 1000;
+      var TYPE_SPEED = 55;
+      var flow = [
+        {
+          type: "text",
+          content:
+            "مرحبا! اسمي كريم زهير . أنا طبيب مختص في المسالك البولية و مشاكل الضعف الجنسي ذو خبرة كبيرة. مرحبا بكم في موقعي الالكتروني الرسمي.",
+        },
+        {
+          type: "text",
+          content:
+            "أقوم هنا بإجراء تشخيصات مجانية وتقديم توصيات شخصية ساعدت مئات الرجال على التخلص من التهاب البروستاتا.",
+        },
+        {
+          type: "text",
+          content:
+            "لكي تتلقى توصياتي، أجب عن بعض الأسئلة.",
+        },
+        {
+          type: "single_choice",
+          content:
+            '<span class="quest">هل لديك رغبة متكررة في التبول؟</span>',
+          answers: ["نعم", "لا", "بشكل مستمر", "نادرا"],
+        },
+        {
+          type: "single_choice",
+          content:
+            '<span class="quest">هل لاحظت أي انزعاج أو ألم في منطقة الفخذ وأسفل الظهر؟</span>',
+          answers: ["نعم", "لا", "بشكل مستمر", "نادرا"],
+        },
+        {
+          type: "single_choice",
+          content: '<span class="quest">هل تدفق البول لديك ضعيف؟</span>',
+          answers: ["نعم", "لا", "بشكل مستمر", "احيانا"],
+        },
+        {
+          type: "single_choice",
+          content: '<span class="quest">هل تدخن؟</span>',
+          answers: ["نعم", "لا", "كثيرا", "احيانا"],
+        },
+        {
+          type: "single_choice",
+          content: '<span class="quest">كم عمرك؟</span>',
+          answers: [
+            "اقل من 30 سنة",
+            "31-50 سنة",
+            "51-60 سنة",
+            "أكثر من 60 عاما",
+          ],
+        },
+        {
+          type: "text",
+          content: "شكرا لإجاباتك.",
+        },
+        {
+          type: "text",
+          content:
+            "في المرحلة الأولية، المرض عمليا لا يظهر نفسه. إن انخفاض مستوى القدرة الجنسية ومشاكل التبول هي العلامات الأولى لمرض في بدايته. الشيء الأكثر أهمية هو عدم تأخير التعامل معه! العجز الجنسي هو النتيجة الأكثر ضررا لهذا المرض. والأخطر من ذلك هو تكون ورم غدة البروستاتا، والذي يؤدي في أغلب الأحيان إلى سرطان البروستاتا. <br> <img class='box-img' src='images/foto_1.jpg'>",
+        },
+        {
+          type: "text",
+          content:
+            "ولذلك فإن التهاب البروستاتا يحمل عدة مخاطر بالنسبة للرجال في نفس الوقت، وأهمها سرطان البروستاتا.",
+        },
+        {
+          type: "text",
+          content:
+            "علاوة على ذلك، فإن العجز الجنسي يحدث في 100% من الحالات، أي مع كل رجل مصاب بالتهاب البروستاتا. عند بعض الناس بشكل اسرع، عند الآخرين في وقت لاحق، ولكن دائما.",
+        },
+        {
+          type: "text",
+          content:
+            "يحدث سرطان البروستاتا في المراحل المتأخرة من التهاب البروستاتا.، &quot;juegan con fuego&quot;.إذا كنت ترغب في العيش لفترة طويلة والحصول على انتصاب جيد، فأنت بحاجة إلى التخلص من التهاب البروستاتا. ويجب عليك أن تفعل ذلك في أقرب وقت ممكن. <br> <img class='box-img' src='images/foto_2.jpg'>",
+        },
+        {
+          type: "text",
+          content:
+            "المشكلة هي أن معظم الرجال المرضى ببساطة لا يذهبون إلى الطبيب للحصول على المساعدة. فمنهم من لا يعتبر هذا المرض خطيرا، والبعض الآخر يعتبره مخزيا. ونتيجة لذلك، لدينا موقف يتجاهل فيه المرضى المرض ببساطة. وإذا طلبوا المساعدة، فغالبًا ما يفعلون ذلك في تلك اللحظة عندما يفوت الأوان ويبدأ الورم السرطاني في التطور.",
+        },
+        {
+          type: "text",
+          content:
+            "يجب أن تفهم أن التهاب البروستاتا مرض قاتل، وخطره الرئيسي هو تحوله إلى ورم سرطاني في البروستاتا. وهذا بدوره يؤدي في أغلب الأحيان إلى وفاة المريض. إذا ترك المرض دون السيطرة عليه أو علاجه، فإنه يتطور أحيانًا بسرعة ويؤدي إلى السرطان خلال سنة أو سنتين. <br> <img class='box-img' src='images/foto_3.jpg'>",
+        },
+        {
+          type: "text",
+          content:
+            "لكن الآن لدى الرجال فرصة فريدة للتخلص من هذا المرض ، ودون زيارات منتظمة للعيادة.",
+        },
+        {
+          type: "text",
+          content:
+            "الحقيقة هي أنه في عام 2023 ظهر منتج ثوري يستعيد وظيفة البروستاتا، ويزيل الالتهاب، ويشفي تمامًا حتى التهاب البروستاتا المزمن، كما يساعد على زيادة بشكل كبير القدرة الجنسية ومدة الجماع.",
+        },
+        {
+          type: "text",
+          content:
+            "اسم هذا المنتج هو RHINO XX. وهو منتج محلي، على الرغم من أن علماء وأطباء من ألمانيا وفرنسا شاركوا أيضًا في تطويره. <br>  <img class='box-img' style='max-width: 70%' src='images/product.png'> ",
+        },
+        {
+          type: "text",
+          content:
+            "يبدأ مفعول RHINO XX من اليوم الأول لاستخدامه.",
+        },
+        {
+          type: "text",
+          content:
+            "وكانت النتائج مفاجئة للغاية لأخصائيي المسالك البولية. ما يقرب من 98 ٪ من جميع المرضى يتعافون دون انتكاسات. الآخرين تخلصوا تمامًا من الأعراض وأوقفوا العمليات الالتهابية في البروستاتا. <br>  ",
+        },
+        {
+          type: "text",
+          content:
+            "لقد أكملت للتو التشخيص عبر الإنترنت وأصبحت المشخص رقم 500 عبر الإنترنت! ",
+        },
+        {
+          type: "text",
+          content:
+            "لذلك، لديك الفرصة للحصول على RHINO XX مع خصم  50% من الشركة المصنعة.",
+        },
+        {
+          type: "text",
+          content:
+            "للحصول على المنتج، ما عليك سوى إدخال اسمك ورقم هاتفك في نموذج الطلب أدناه.",
+        },
+        {
+          type: "text",
+          content:
+            "تذكر: يمكن علاج التهاب البروستاتا! أتمنى لك الصحة الجيدة وكل التوفيق!",
+        },
+        {
+          type: "form",
+          templateId: "orderForm",
+        },
+      ];
+      flow.reduce(function (acc, el) {
+        return acc.then(function (prevAnswer) {
+          return new Promise(function (resolve) {
+            setTimeout(function () {
+              $("html, body").animate(
+                { scrollTop: $(document).height() - $(window).height() + 450 },
+                300
+              );
+              var $messagesContainer = $(".container2");
+              if (prevAnswer) {
+                var $answerContainer = $(
+                  '<div class="box answer-big">' + prevAnswer + "</div>"
+                );
+                $messagesContainer.append($answerContainer);
+              }
+
+              var id = "rand_" + new Date().getTime();
+              var $messageContainer = $(
+                "<div id='".concat(id, '\' class="box"></div>')
+              );
+              $messagesContainer.append($messageContainer);
+
+              switch (el.type) {
+                case "single_choice":
+                  new Typed("#".concat(id), {
+                    strings: [el.content],
+                    showCursor: false,
+                    typeSpeed: TYPE_SPEED,
+                    onComplete: function onComplete() {
+                      var $singleChoiceForm = createSingleChoiceForm(
+                        el.answers
+                      );
+                      $singleChoiceForm
+                        .find("[data-answer]")
+                        .click(function (event) {
+                          $("html, body").animate(
+                            {
+                              scrollTop:
+                                $(document).height() - $(window).height() + 550,
+                            },
+                            300
+                          );
+                          let $answer = $(event.target);
+                          $answer.addClass("active");
+                          $singleChoiceForm.find(".answer").hide();
+                          resolve($answer.text());
+                        });
+                      $messageContainer.append($singleChoiceForm);
+                      el.afterMount && el.afterMount();
+                    },
+                  });
+                  break;
+
+                case "form":
+                  var formHtml = $("template#".concat(el.templateId)).html();
+                  $messageContainer.append(formHtml);
+                  el.afterMount && el.afterMount();
+                  resolve();
+                  getValueQuest();
+                  break;
+
+                case "text":
+                  new Typed("#".concat(id), {
+                    strings: [el.content],
+                    showCursor: false,
+                    typeSpeed: TYPE_SPEED,
+                    onComplete: function onComplete() {
+                      $("#" + id + " img.box-img")
+                        .toArray()
+
+                        .reduce(function (acc, img) {
+                          return acc.then(function () {
+                            return new Promise(function (resolveImg) {
+                              setTimeout(function () {
+                                $(img).show();
+                                resolveImg();
+                              }, MSG_DELAY);
+                            });
+                          });
+                        }, Promise.resolve())
+
+                        .then(function () {
+                          el.afterMount && el.afterMount();
+                          resolve();
+                        });
+                    },
+                  });
+              }
+            }, MSG_DELAY);
+          });
+        });
+      }, Promise.resolve());
+
+      function createSingleChoiceForm(answers) {
+        var answersHtml = answers.reduce(function (result, answer) {
+          return (
+            result +
+            '<button type="button" class="answer" data-answer>'.concat(
+              answer,
+              "</button>"
+            )
+          );
+        }, "");
+        return $('<div class="answers">'.concat(answersHtml, "</div>"));
+      }
+
+      function getValueQuest() {
+        var quest = document.querySelectorAll(".quest"),
+          answ = document.querySelectorAll(".answer-big"),
+          arr = [];
+        for (var i = 0; i < quest.length; i++) {
+          arr.push({ q: quest[i].innerHTML, a: answ[i].innerHTML });
+        }
+
+        $("form")
+          .find("input[name='question_answer']")
+          .val(JSON.stringify(arr));
+      }
+    </script>
+    <template id="orderForm">
+      <form id="order_form2"
+        action="../sends/send_cpatl.php"
+        class="orderForm  "
+
+        method="POST"
+      >
+        <!--  ../sends/send_cpatl.php  -->
+        <input type="hidden" name="country" value="DZ">
+        <input type="hidden" name="offer" value="9791">
+        <input type="hidden" name="price" value="5999">
+
+        <input type="hidden" name="pixel" value="{pixel}">
+        <input type="hidden" name="utm_term" value="{subid}">
+        <input type="hidden" name="utm_source" value="{utm_source}">
+        <input type="hidden" name="utm_medium" value="{utm_medium}">
+        <input type="hidden" name="utm_campaign" value="{utm_campaign}">
+        <input type="hidden" name="sub5" value="{utm_content}">
+        <input type="hidden" name="utm_content" value="{utm_content}">
+        <input type="hidden" name="landing_id" value="{landing_id}">
+        <input type="hidden" name="offer_id" value="{offer_id}">
+        <input type="hidden" name="compain_id" value="{campaign_id}">
+        <!--  ../sends/send_cpatl.php  -->
+
+        <center>
+          <img src="images/product.png" style="max-width: 50%">
+          </center>
+        <center>
+          <div style="text-align: center;" class="prices">
+            <p class="prices__item prices__item--old">11998 DZD</p>
+            <p class="prices__item prices__item--new">5999 DZD</p>
+            <p>
+              عند شرائك دورة RHINO XX
+            </p>
+          </div>
+        </center>
+        <div class="order_form">
+          <div class="block_form">
+            <label class="block_form_label"> اسم: </label>
+            <div>
+              <input
+                class="form_input"
+                name="name"
+                required
+                placeholder="أدخل أسمك"
+              >
+            </div>
+          </div>
+          <div class="block_form">
+            <label class="block_form_label"> هاتف: </label>
+            <p id="phone-example" style="text-align: center !important;"></p>
+
+              <input class="form_input" name="phone" id="phone"
+                     minlength="6" maxlength="19"
+                     placeholder="هاتف" required="" type="tel">
+
+            <br>
+            <style>
+              #warning {
+                color: red;
+              }
+              @keyframes shake {
+                0% { transform: translateX(0); }
+                25% { transform: translateX(-5px); }
+                50% { transform: translateX(5px); }
+                75% { transform: translateX(-5px); }
+                100% { transform: translateX(0); }
+              }
+
+              .error-animation {
+                animation-name: shake;
+                animation-duration: 0.4s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: 1;
+              }
+            </style>
+            <p id="warning" class="error-message"></p>
+<!--            </div>-->
+          </div>
+          <div class="clear"></div>
+          <button class="button order-btn ifr_button button__text">
+            احصل على RHINO XX
+          </button>
+
+         
+        </div>
+      </form>
+      <script src="js/valik.js"></script>
+    </template>
+
+   
+<!-- <script src="https://amazing-cdn.com/modal/backfix.min.js?PageSpeed=off"></script> -->
+<!--<script >-->
+
+
+<!--    function startBackfix(id){-->
+<!--        setTimeout(function () {-->
+<!--            bajb_backdetect.OnBack = function () {-->
+<!--                window.history.back = function () {-->
+<!--                    let urlParams = [];-->
+<!--                    new URL(window.location.href).searchParams.forEach((value, key) => {-->
+<!--                        if (key.match(/^data[1-5]{1}$/gm)) {-->
+<!--                            urlParams.push(encodeURIComponent(key) + "=" + encodeURIComponent(value));-->
+<!--                        }-->
+<!--                    })-->
+<!--                    if (urlParams.length > 0) {-->
+<!--                        urlParams = "?" + urlParams.join("&");-->
+<!--                    } else {-->
+<!--                        urlParams = "";-->
+<!--                    }-->
+<!--                    // document.location = "https://hotnewstoday.fun/wid" + id +"/pmt1/ext1/" + urlParams;-->
+<!--                    document.location = "https://guesturabha.cf/WvsghGWy?utm_source={landing_id}&utm_medium=Vitrina&pam=param"+ urlParams;-->
+<!--                }-->
+<!--            }-->
+<!--        }, 200);-->
+<!--    }-->
+<!--</script>-->
+<!--<script>startBackfix(257916)</script>-->
+
+  </body>
+</html>
